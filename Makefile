@@ -1,13 +1,13 @@
 KEYMAP_NAME="josepablocb"
 
 .PHONY: all
-all: configure
+all:
 	qmk compile -kb crkbd/rev1 -km $(KEYMAP_NAME) -c
 
 .PHONY: flash
-flash: configure all
+flash: all
 	qmk flash -kb crkbd/rev1 -km $(KEYMAP_NAME)
 
-.PHONY: configure
+.PHONY: config
 config:
-	bash -s ./init.sh
+	sh -c ./init.sh
