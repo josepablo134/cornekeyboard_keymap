@@ -9,7 +9,7 @@ clean:
 	qmk clean
 
 .PHONY: flash
-flash: all
+flash:
 	qmk flash -kb crkbd/rev1 -km $(KEYMAP_NAME)
 
 .PHONY: config
